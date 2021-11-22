@@ -5,7 +5,8 @@ const Card = (props) => {
         <div className="card">
             <div className="card_head">
                 <div className="day">Today</div>
-                <div className="add" onClick={()=>props.dispatch({type : "add" , payload : props.place})}>add</div>
+                {console.log(props.state.find((sta)=>sta.place===props.place))}
+                {props.state.find((sta)=>sta.place===props.place)!==undefined?<div className="add">added</div>:<div className="add" onClick={()=>props.dispatch({type : "add" , payload : props.place})}>add</div>}
             </div>
             <div className="card_body">
                 <div className="city">{props.place}</div>

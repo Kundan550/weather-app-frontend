@@ -74,7 +74,7 @@ const Weathersearch = () => {
                 <button type="submit" id="search_place">find</button>
             </form>
         </div>
-        {temperature && <Card place={place} temperature={Math.round(temperature)}  wind={Math.round(wind)} humidity={humidity} cond={cond} img={img} dispatch={dispatch}/>}
+        {temperature && <Card place={place} temperature={Math.round(temperature)}  wind={Math.round(wind)} humidity={humidity} cond={cond} img={img} dispatch={dispatch} state={state}/>}
         <div className="added_container">
             <div className="head">
                 <h1>Added places</h1>
