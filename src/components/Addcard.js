@@ -6,7 +6,7 @@ const Addcard = (props) => {
     const [humidity, sethumidity] = useState(null)
 
     useEffect(() => {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${props.place}&units=metric&appid=45f89f08e9beaa33055f2be0c500f21f`).then((data)=>data.json()).then((result)=>{
+        fetch(`https://weather-backend-2lt1.onrender.com/getWeatherInfo/city?city=${placename}`).then((data)=>data.json()).then((result)=>{
             settemperature(result.main.temp);
             sethumidity(result.main.humidity);
         });
